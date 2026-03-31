@@ -279,6 +279,7 @@
 }
 
 @media (max-width: 900px) {
+  .testimonials { padding: 5rem 0; }
   .testimonials__carousel { grid-template-columns: 1fr; }
   .testimonials__side { display: none; }
 }

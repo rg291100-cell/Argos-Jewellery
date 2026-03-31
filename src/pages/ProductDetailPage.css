@@ -296,6 +296,8 @@
 @media (max-width: 560px) {
   .pdp__related-grid { grid-template-columns: 1fr; }
   .pdp__trust { grid-template-columns: repeat(2, 1fr); }
-  .pdp__add-wrap { flex-direction: column; }
-  .pdp__add-btn { width: 100%; }
+  .pdp__add-wrap { flex-direction: column; align-items: stretch; }
+  .pdp__add-btn { width: 100%; justify-content: center; }
+  .pdp__qty { width: 100%; justify-content: center; }
+  .pdp__wishlist-btn { width: 100%; border-radius: 50px; }
 }

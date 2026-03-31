@@ -283,3 +283,36 @@
     order: -1;
   }
 }
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 7rem 1rem 4rem;
+  }
+  
+  .hero__title {
+    font-size: clamp(2.2rem, 10vw, 3rem);
+  }
+
+  .hero__stats {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  
+  .hero__cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero__cta-group a {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .hero__canvas-wrapper {
+    max-width: 250px;
+  }
+  
+  .hero__title-script {
+    font-size: 1.1em;
+  }
+}

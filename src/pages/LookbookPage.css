@@ -225,4 +225,10 @@
 .lookbook-banner__emoji { font-size: 3rem; display: block; }
 
 @media (max-width: 1000px) { .lookbook-grid { grid-template-columns: repeat(2, 1fr); } .lookbook-card--large { grid-column: span 2; } }
-@media (max-width: 700px) { .lookbook-grid { grid-template-columns: 1fr; } .lookbook-card--large { grid-column: span 1; } .lookbook-banner { flex-direction: column; padding: 2rem; } }
+@media (max-width: 700px) {
+  .lookbook-hero { min-height: 60vh; }
+  .lookbook-hero__title { font-size: clamp(2.8rem, 10vw, 4rem); }
+  .lookbook-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .lookbook-card--large { grid-column: span 1; }
+  .lookbook-banner { flex-direction: column; padding: 2rem; margin-bottom: 3rem; text-align: center; gap: 1.5rem; }
+}

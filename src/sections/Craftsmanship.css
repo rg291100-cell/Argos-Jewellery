@@ -154,11 +154,13 @@
 
 /* Responsive */
 @media (max-width: 1100px) {
+  .craft { padding: 6rem 0; }
   .craft__steps { grid-template-columns: repeat(3, 1fr); gap: 2rem; }
   .craft__connector { display: none; }
 }
 
 @media (max-width: 700px) {
+  .craft { padding: 4rem 0; }
   .craft__steps { grid-template-columns: 1fr; gap: 2.5rem; }
   .craft__banner { flex-direction: column; text-align: center; }
   .craft__banner-left { flex-direction: column; }

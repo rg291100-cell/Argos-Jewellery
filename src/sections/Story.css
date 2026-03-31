@@ -210,9 +210,21 @@
 
 /* Responsive */
 @media (max-width: 900px) {
-  .story__grid { grid-template-columns: 1fr; }
+  .story { padding: 6rem 0; }
+  .story__grid { grid-template-columns: 1fr; gap: 3rem; }
   .story__visual { min-height: 350px; }
   .story__deco-ring--1 { width: 260px; height: 260px; }
   .story__deco-ring--2 { width: 340px; height: 340px; }
   .story__main-card { width: 200px; height: 200px; }
+}
+
+@media (max-width: 600px) {
+  .story { padding: 4rem 0; }
+  .story__title { font-size: clamp(2rem, 8vw, 2.5rem); }
+  .story__badge { min-width: auto; padding: 0.6rem 0.8rem; }
+  .story__badge-title { font-size: 0.85rem; }
+  .story__badge-sub { font-size: 0.6rem; }
+  .story__main-card { width: 160px; height: 160px; }
+  .story__deco-ring--1 { width: 210px; height: 210px; }
+  .story__deco-ring--2 { width: 270px; height: 270px; }
 }

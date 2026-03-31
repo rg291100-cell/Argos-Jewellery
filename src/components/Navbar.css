@@ -282,6 +282,10 @@
 .navbar__mobile-menu {
   display: none;
   flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
   background: rgba(253,248,244,0.98);
   backdrop-filter: blur(24px);
   border-top: 1px solid rgba(200,169,110,0.18);

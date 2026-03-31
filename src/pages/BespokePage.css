@@ -322,15 +322,22 @@
 
 /* Responsive */
 @media (max-width: 900px) {
-  .bespoke-hero__inner { grid-template-columns: 1fr; }
+  .bespoke-hero__inner { grid-template-columns: 1fr; padding: 2rem 0; }
   .bespoke-hero__visual { display: none; }
   .bespoke-stats__grid { grid-template-columns: repeat(2, 1fr); }
-  .bespoke-steps { flex-direction: column; }
+  .bespoke-steps { flex-direction: column; gap: 2.5rem; }
   .bespoke-step__connector { display: none; }
   .bespoke-form-section__inner { grid-template-columns: 1fr; gap: 2.5rem; }
 }
 
 @media (max-width: 560px) {
-  .bespoke-stats__grid { grid-template-columns: repeat(2, 1fr); }
-  .bespoke-form { padding: 1.75rem; }
+  .bespoke-hero__title { font-size: clamp(2.5rem, 10vw, 3.5rem); }
+  .bespoke-cta-group { flex-direction: column; width: 100%; display: flex; }
+  .bespoke-hero__ctas a { width: 100%; justify-content: center; }
+  .bespoke-stats { padding: 3rem 0; }
+  .bespoke-stats__grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+  .bespoke-process { padding: 4rem 0; }
+  .bespoke-form-section { padding: 4rem 0; }
+  .bespoke-form { padding: 1.5rem; }
+  .bespoke-faqs { padding: 4rem 0; }
 }
