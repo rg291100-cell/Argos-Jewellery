@@ -1,0 +1,233 @@
+.collections {
+  padding: 8rem 0;
+  background: var(--white);
+  position: relative;
+}
+
+.collections::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), var(--pink-300), var(--gold), transparent);
+}
+
+.collections__header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.collections__title {
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  font-weight: 400;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  line-height: 1.15;
+}
+
+.collections__subtitle {
+  font-size: 0.95rem;
+  color: var(--text-mid);
+  max-width: 520px;
+  margin: 1rem auto 0;
+  line-height: 1.85;
+  font-weight: 300;
+}
+
+/* Grid */
+.collections__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+/* Card */
+.collection-card {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  box-shadow: var(--shadow-soft);
+  transition: box-shadow 0.25s, transform 0.3s;
+  contain: layout paint;
+}
+
+.collection-card:hover {
+  box-shadow: var(--shadow-pink);
+}
+
+.collection-card__visual {
+  position: relative;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.collection-card__icon {
+  font-size: 4.5rem;
+  filter: drop-shadow(0 8px 24px rgba(0,0,0,0.1));
+  z-index: 2;
+  position: relative;
+}
+
+/* Orbit rings */
+.collection-card__orbit {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  border: 1px solid;
+  animation: spin-slow 12s linear infinite;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.collection-card__orbit--2 {
+  width: 95%;
+  height: 95%;
+  animation-direction: reverse;
+  animation-duration: 20s;
+  border-style: dashed;
+}
+
+/* Sparkle dots */
+.collection-card__dot {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  opacity: 0.7;
+  will-change: opacity, transform;
+}
+
+.collection-card__dot--1 {
+  top: 18%;
+  left: 20%;
+  animation: sparkle 3s ease-in-out infinite;
+}
+
+.collection-card__dot--2 {
+  top: 25%;
+  right: 15%;
+  animation: sparkle 3s ease-in-out infinite 1s;
+}
+
+.collection-card__dot--3 {
+  bottom: 20%;
+  left: 50%;
+  animation: sparkle 3s ease-in-out infinite 2s;
+}
+
+/* Badge */
+.collection-card__badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: white;
+  z-index: 3;
+}
+
+.collection-card__pieces {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--text-mid);
+  background: rgba(255,255,255,0.8);
+  padding: 0.2rem 0.6rem;
+  border-radius: 50px;
+  z-index: 3;
+}
+
+/* Info */
+.collection-card__info {
+  padding: 1.5rem;
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+  margin-top: -1px;
+}
+
+.collection-card__subtitle {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-light);
+}
+
+.collection-card__title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  margin: 0.3rem 0 0.6rem;
+}
+
+.collection-card__desc {
+  font-size: 0.8rem;
+  color: var(--text-mid);
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+  font-weight: 300;
+}
+
+.collection-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.collection-card__price {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.collection-card__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: none;
+  border: 1px solid rgba(200, 169, 110, 0.4);
+  color: var(--text-dark);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.collection-card__btn:hover {
+  background: linear-gradient(135deg, var(--pink-300), var(--gold-light));
+  border-color: transparent;
+  transform: translateX(4px);
+}
+
+/* CTA */
+.collections__cta {
+  text-align: center;
+  margin-top: 3.5rem;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .collections__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .collections__grid { grid-template-columns: 1fr; }
+}

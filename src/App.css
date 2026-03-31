@@ -1,0 +1,53 @@
+/* App wrapper */
+.app {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Particle container */
+.particles-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  animation: particle-drift linear infinite;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+}
+
+/* Page transition overlay */
+.page-overlay {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, var(--pink-100), var(--cream));
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader-logo {
+  font-family: 'Great Vibes', cursive;
+  font-size: 4rem;
+  background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--rose-gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: pulse-glow 1.5s ease-in-out infinite;
+}
+
+.loader-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--pink-300), var(--gold), var(--pink-300));
+  background-size: 200% 100%;
+  animation: shimmer 1.5s linear infinite;
+}
