@@ -282,4 +282,13 @@
   .testimonials { padding: 5rem 0; }
   .testimonials__carousel { grid-template-columns: 1fr; }
   .testimonials__side { display: none; }
+  .testimonials__header { margin-bottom: 2.5rem; }
+}
+
+@media (max-width: 600px) {
+  .testimonials { padding: 4rem 0; }
+  .testimonials__main { padding: 2rem 1.5rem; }
+  .testimonials__quote-mark { font-size: 7rem; }
+  .testimonials__text { font-size: 1.1rem; }
+  .testimonials__trust-row { flex-direction: column; align-items: center; }
 }

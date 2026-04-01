@@ -157,11 +157,23 @@
   .craft { padding: 6rem 0; }
   .craft__steps { grid-template-columns: repeat(3, 1fr); gap: 2rem; }
   .craft__connector { display: none; }
+  .craft__header { margin-bottom: 3rem; }
 }
 
 @media (max-width: 700px) {
   .craft { padding: 4rem 0; }
-  .craft__steps { grid-template-columns: 1fr; gap: 2.5rem; }
-  .craft__banner { flex-direction: column; text-align: center; }
-  .craft__banner-left { flex-direction: column; }
+  .craft__steps { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+  .craft__banner { flex-direction: column; text-align: center; padding: 2rem 1.5rem; }
+  .craft__banner-left { flex-direction: column; gap: 1rem; }
+  .craft__banner-icon { font-size: 2rem; }
+  .craft__banner-title { font-size: 1.25rem; }
 }
+
+@media (max-width: 480px) {
+  .craft__steps { grid-template-columns: 1fr; gap: 1.5rem; }
+  .craft__step { padding: 0; }
+  .craft__icon-wrap { width: 70px; height: 70px; }
+  .craft__icon { font-size: 1.8rem; }
+  .craft__step-num { font-size: 2.5rem; }
+}
+

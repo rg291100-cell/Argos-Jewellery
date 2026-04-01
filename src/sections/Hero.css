@@ -262,57 +262,88 @@
   will-change: transform, opacity;
 }
 
-/* Responsive */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
+  .hero {
+    padding: 6rem 1.5rem 3rem;
+    min-height: auto;
+  }
+
   .hero__inner {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    gap: 2rem;
     text-align: center;
   }
 
   .hero__content {
     align-items: center;
+    order: 1;
   }
 
-  .hero__stats {
-    justify-content: center;
-  }
+  .hero__stats { justify-content: center; }
 
   .hero__canvas-wrapper {
-    max-width: 320px;
+    max-width: 280px;
     order: -1;
+    margin: 0 auto;
   }
 }
 
 @media (max-width: 600px) {
   .hero {
-    padding: 7rem 1rem 4rem;
+    padding: 5rem 1rem 2.5rem;
   }
-  
+
+  /* Hide the 3D canvas on small mobile — too heavy, causes overflow */
+  .hero__canvas-wrapper { display: none; }
+
+  /* Reduce blob sizes to prevent overflow */
+  .hero__blob--1 { width: 250px; height: 250px; top: -80px; right: -50px; }
+  .hero__blob--2 { width: 200px; height: 200px; bottom: -30px; left: -50px; }
+  .hero__blob--3 { display: none; }
+
+  /* Reduce sparkles on mobile */
+  .hero__sparkle { display: none; }
+
   .hero__title {
-    font-size: clamp(2.2rem, 10vw, 3rem);
+    font-size: clamp(2.2rem, 12vw, 3rem);
+  }
+
+  .hero__title-script {
+    font-size: 1.15em;
+  }
+
+  .hero__subtitle {
+    font-size: 0.88rem;
+    max-width: 100%;
   }
 
   .hero__stats {
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: 1.25rem;
+    justify-content: center;
   }
-  
+
+  .hero__stat-value { font-size: 1.6rem; }
+
   .hero__cta-group {
     flex-direction: column;
     width: 100%;
+    align-items: stretch;
   }
 
   .hero__cta-group a {
     width: 100%;
+    text-align: center;
     justify-content: center;
   }
-  
-  .hero__canvas-wrapper {
-    max-width: 250px;
-  }
-  
-  .hero__title-script {
-    font-size: 1.1em;
-  }
+
+  /* Hide scroll indicator on mobile */
+  .hero__scroll { display: none; }
+}
+
+@media (max-width: 375px) {
+  .hero { padding: 4.5rem 0.75rem 2rem; }
+  .hero__title { font-size: clamp(1.9rem, 11vw, 2.5rem); }
+  .hero__stats { gap: 1rem; }
 }

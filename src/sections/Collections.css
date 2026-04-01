@@ -226,10 +226,20 @@
 /* Responsive */
 @media (max-width: 1100px) {
   .collections { padding: 6rem 0; }
-  .collections__grid { grid-template-columns: repeat(2, 1fr); }
+  .collections__grid { grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+  .collections__header { margin-bottom: 3rem; }
 }
 
-@media (max-width: 600px) {
-  .collections { padding: 4rem 0; }
-  .collections__grid { grid-template-columns: 1fr; }
+@media (max-width: 768px) {
+  .collections__grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  .collection-card__info { padding: 1.25rem; }
+  .collection-card__title { font-size: 1.2rem; }
+  .collection-card__desc { font-size: 0.75rem; }
+}
+
+@media (max-width: 480px) {
+  .collections { padding: 3rem 0; }
+  .collections__grid { grid-template-columns: 1fr; gap: 1rem; }
+  .collections__header { margin-bottom: 2rem; }
+  .collection-card__visual { aspect-ratio: 1.3; }
 }
